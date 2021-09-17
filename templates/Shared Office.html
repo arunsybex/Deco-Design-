@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Shared Office | Deco Design</title>
+  {% load static %}
+  <link rel="icon" href="{% static 'logo.png' %}">
+  <link rel="stylesheet" href="{% static 'other.css' %}" type="text/css">
+</head>
+
+<body bgcolor="white">
+
+  <table border="0" cellpadding="0" cellspacing="0" align="right">
+    <th><img src="{% static 'facebook icon.PNG' %}"></th>
+    <th><img src="{% static 'twitter icon.PNG' %}"></th>
+    <th><img src="{% static 'pintrest icon.PNG' %}"></th>
+    <th><img src="{% static 'linkdin icon.PNG' %}"></th>
+    <th><img src="{% static 'youtube icon.PNG' %}"></th>
+    <th><img src="{% static 'instagram icon.PNG' %}"></th>
+  </table>
+
+  </br>
+  </br>
+
+  <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+      <hr />
+      <th width="12.5%"><img src="{% static 'logo.PNG' %}"></th>
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="6.5" align="center">
+            <strong><a href="{% url 'home' %}" id="manmeet">Home</a></strong>
+          </font>
+        </center>
+      </td>
+      <th width="12.5%">
+        <font color="black" face="calibri" size="6.5" align="center">
+          <strong>About</strong>
+        </font>
+      </th>
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="4" align="center">
+            <div class="dropdown">
+              <button class="dropbtn"><strong>Residential</strong></button>
+              <div class="dropdown-content">
+                <a href="{% url 'livingroom' %}">Living/Drawing Room</a>
+                <a href="{% url 'diningroom'%}">Dining Room</a>
+                <a href="{% url 'kidrroom' %}">Kids Room</a>
+                <a href="{% url 'studyroom'%}">Study Room</a>
+                <a href="{% url 'bedroom' %}">Bedroom</a>
+                <a href="{% url 'falseceiling' %}">False Ceiling</a>
+              </div>
+            </div>
+          </font>
+        </center>
+      </td>
+
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="4" align="center">
+            <div class="dropdown">
+              <button class="dropbtn"><strong>Commercial</strong></button>
+              <div class="dropdown-content">
+                <a href="{% url 'school' %}">School</a>
+                <a href="{% url 'gym' %}">Gym</a>
+                <a href="{% url 'cafe' %}">Cafe</a>
+                <a href="{% url 'restaurants' %}">Restaurants</a>
+              </div>
+            </div>
+          </font>
+        </center>
+      </td>
+
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="4" align="center">
+            <div class="dropdown">
+              <button class="dropbtn"><strong>Office</strong></button>
+              <div class="dropdown-content">
+                <a href="{% url 'managerroom' %}">Manager Room</a>
+                <a href="{% url 'sharedoffice' %}">Shared Office</a>
+                <a href="{% url 'reception' %}">Reception</a>
+                <a href="#"></a>
+              </div>
+            </div>
+          </font>
+        </center>
+      </td>
+      {% if user.is_authenticated %}
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="6.5" align="center">
+            <strong>Hello, {{user.first_name}}</strong>
+          </font>
+        </center>
+      </td>
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="6.5" align="center">
+            <strong><a href="{% url 'logout' %}" id="manmeet">Logout</a></strong>
+          </font>
+        </center>
+      </td>
+      <td width= "12.5%">
+        <font color="black" face="calibri" size="6.5" align="left">
+          <strong><a href="{% url 'contact' %}" id="manmeet">Contact Us</a></strong>
+        </font>
+      </td>
+      {% else %}
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="6.5" align="center">
+            <strong><a href="{% url 'register' %}" id="manmeet">Register</a></strong>
+          </font>
+        </center>
+      </td>
+
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="6.5" align="center">
+            <strong><a href="{% url 'login' %}" id="manmeet">Login</a></strong>
+          </font>
+        </center>
+      </td>
+      {% endif %}
+
+  </table>
+
+  <center><img src="{% static 'shared office banner.PNG' %}" width="100%" height="65%"></center>
+
+  </br>
+  </br>
+
+  <table border="0" width="70%" cellpadding="10" cellspacing="20" align="center">
+    <tr>
+      <td>
+        <p>
+          <font color="black" face="calibri" size="10" align="left">
+            SHARED OFFICE
+          </font>
+        </p>
+
+        <p>
+          <font color="black" face="calibri" size="4" align="left">
+            We already know that a carefully designed workspace can inspire people</br>
+            to be more producyive and if your office affers table and nothingbut desks and PCs,</br>
+            you're not getting the most out of your employees. This means that it's time for</br>
+            an office remodel project.
+          </font>
+        </p>
+      </td>
+
+      <th><img src="{% static 'shared office img.PNG' %}" class="zoom"></th>
+
+    </tr>
+  </table>
+
+  <hr />
+  <center>
+    <p>
+      <font color="black" face="calibri" size="6" align="center">
+        SHARED OFFICE IDEAS
+      </font>
+    </p>
+
+    <p>
+      <font color="black" face="calibri" size="4.5" align="center">
+        We can see the beauty of interior design, the creativity and the extraordinary, and unique style, we think
+        that
+        we also want this type of environment to work.
+        </br>
+        </br>
+        </br>
+        Our quality interior designing services and customer satisfaction approach has helped us in building a
+        positive
+        relationship of trust and good will with our</br>
+        customers.We work closely to understand your needs and make your workplace stylish and functional. We designed
+        most efficient modular office design using</br>
+        latest modern creativity to provide you maximum utilization of the office space. We create smart offices witth
+        modern intrior till client satisfaction.
+    </p>
+    </font>
+  </center>
+
+  </br>
+  </br>
+
+  <hr />
+
+  <br>
+  <br>
+
+  <center>
+    <table width="100%">
+      <tr>
+        <td width="25%">
+          <img src="{% static 'SO 1.png' %}" class="zoom">
+        </td>
+        <td width="25%">
+          <img src="{% static 'SO 2.PNG' %}" class="zoom">
+        </td>
+        <td width="25%">
+          <img src="{% static 'SO 3.PNG' %}" class="zoom">
+        </td>
+        <td width="25%">
+          <img src="{% static 'SO 4.PNG' %}" class="zoom">
+        </td>
+      </tr>
+    </table>
+  </center>
+
+  <br>
+  <br>
+
+  <img src="{% static 'ending.png' %}">
+  <img src="{% static 'ending 2.png' %}">
+
+</body>
+
+</html>

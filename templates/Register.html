@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register | Deco Design</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'logo.png' %}">
+    <link rel="stylesheet" href="{% static 'register.css' %}" type="text/css">
+    <style>
+        #manmeet {
+            color: white;
+            text-decoration: none;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="register-box">
+        <form action="register" method="post">
+
+            {% csrf_token %}
+
+            <h1>Registration</h1>
+            <div class="textbox">
+                <input type="text" placeholder="First Name" name="first_name" value="">
+            </div>
+
+            <div class="textbox">
+                <input type="text" placeholder="Last Name" name="last_name" value="">
+            </div>
+
+            <div class="textbox">
+                <input type="text" placeholder="Username" name="username" value="">
+            </div>
+
+            <div class="textbox">
+                <input type="text" placeholder="E-Mail" name="email" value="">
+            </div>
+
+            <div class="textbox">
+                <input type="password" placeholder="Password" name="password1" value="">
+            </div>
+
+            <div class="textbox">
+                <input type="password" placeholder="Confirm Password" name="password2" value="">
+            </div>
+
+            <input class="button" type="submit" name="register" value="Register">
+            <center>
+                <font color="black" face="calibri" size="6.5" align="left">
+                    <strong><a href="{% url 'home' %}" id="manmeet">
+                            <h1>Home</h1>
+                        </a></strong>
+                </font>
+            </center>
+
+            <div>
+                {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                        {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Gym | Deco Design</title>
+  {% load static %}
+  <link rel="icon" href="{% static 'logo.png' %}">
+  <link rel="stylesheet" href="{% static 'other.css' %}" type="text/css">
+</head>
+
+<body bgcolor="white">
+
+  <table border="0" cellpadding="0" cellspacing="0" align="right">
+    <th><img src="{% static 'facebook icon.PNG' %}"></th>
+    <th><img src="{% static 'twitter icon.PNG' %}"></th>
+    <th><img src="{% static 'pintrest icon.PNG' %}"></th>
+    <th><img src="{% static 'linkdin icon.PNG' %}"></th>
+    <th><img src="{% static 'youtube icon.PNG' %}"></th>
+    <th><img src="{% static 'instagram icon.PNG' %}"></th>
+  </table>
+
+  </br>
+  </br>
+
+  <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+      <hr />
+      <th width="12.5%"><img src="{% static 'logo.PNG' %}"></th>
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="6.5" align="center">
+            <strong><a href="{% url 'home' %}" id="manmeet">Home</a></strong>
+          </font>
+        </center>
+      </td>
+      <th width="12.5%">
+        <font color="black" face="calibri" size="6.5" align="center">
+          <strong>About</strong>
+        </font>
+      </th>
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="4" align="center">
+            <div class="dropdown">
+              <button class="dropbtn"><strong>Residential</strong></button>
+              <div class="dropdown-content">
+                <a href="{% url 'livingroom' %}">Living/Drawing Room</a>
+                <a href="{% url 'diningroom'%}">Dining Room</a>
+                <a href="{% url 'kidrroom' %}">Kids Room</a>
+                <a href="{% url 'studyroom'%}">Study Room</a>
+                <a href="{% url 'bedroom' %}">Bedroom</a>
+                <a href="{% url 'falseceiling' %}">False Ceiling</a>
+              </div>
+            </div>
+          </font>
+        </center>
+      </td>
+
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="4" align="center">
+            <div class="dropdown">
+              <button class="dropbtn"><strong>Commercial</strong></button>
+              <div class="dropdown-content">
+                <a href="{% url 'school' %}">School</a>
+                <a href="{% url 'gym' %}">Gym</a>
+                <a href="{% url 'cafe' %}">Cafe</a>
+                <a href="{% url 'restaurants' %}">Restaurants</a>
+              </div>
+            </div>
+          </font>
+        </center>
+      </td>
+
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="4" align="center">
+            <div class="dropdown">
+              <button class="dropbtn"><strong>Office</strong></button>
+              <div class="dropdown-content">
+                <a href="{% url 'managerroom' %}">Manager Room</a>
+                <a href="{% url 'sharedoffice' %}">Shared Office</a>
+                <a href="{% url 'reception' %}">Reception</a>
+                <a href="#"></a>
+              </div>
+            </div>
+          </font>
+        </center>
+      </td>
+      {% if user.is_authenticated %}
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="6.5" align="center">
+            <strong>Hello, {{user.first_name}}</strong>
+          </font>
+        </center>
+      </td>
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="6.5" align="center">
+            <strong><a href="{% url 'logout' %}" id="manmeet">Logout</a></strong>
+          </font>
+        </center>
+      </td>
+      <td width= "12.5%">
+        <font color="black" face="calibri" size="6.5" align="left">
+          <strong><a href="{% url 'contact' %}" id="manmeet">Contact Us</a></strong>
+        </font>
+      </td>
+      {% else %}
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="6.5" align="center">
+            <strong><a href="{% url 'register' %}" id="manmeet">Register</a></strong>
+          </font>
+        </center>
+      </td>
+
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="6.5" align="center">
+            <strong><a href="{% url 'login' %}" id="manmeet">Login</a></strong>
+          </font>
+        </center>
+      </td>
+      {% endif %}
+
+  </table>
+
+  <center><img src="{% static 'gym banner.PNG' %}" width="100%" height="65%"></center>
+
+  </br>
+  </br>
+
+  <table border="0" width="65%" cellpadding="10" cellspacing="20" align="center">
+    <tr>
+      <td>
+        <p>
+          <font color="black" face="calibri" size="10" align="left">
+            GYM
+          </font>
+        </p>
+
+        <p>
+          <font color="black" face="calibri" size="4" align="left">
+            <strong>Gym Interior Designing Serviice</strong> that increase the beauty and elegance</br>
+            of the gym. Our adroit personal use the ultra-modern techniques to</br>
+            execute the offered services as per the latest market trends.
+          </font>
+        </p>
+      </td>
+
+      <th><img src="{% static 'gym img.PNG' %}" class="zoom"></th>
+
+    </tr>
+  </table>
+
+  <hr />
+  <center>
+    <p>
+      <font color="black" face="calibri" size="6" align="center">
+        GYM IDEAS
+      </font>
+    </p>
+
+    <p>
+      <font color="black" face="calibri" size="4.5" align="center">
+        Owning to our expertise in this domain, we are highly engaged in rendering<strong> Gym Interior Designing
+          Service </strong>Executed as per the varied requirments of our</br>
+        valuable clients, offered service is highly appreciated because of its reliability and timely execution.
+        Offered service can be availed by our clients at competitive</br>
+        price.
+
+    </p>
+  </center>
+
+  </br>
+  </br>
+
+  <hr />
+
+  <br>
+  <br>
+
+  <center>
+    <table width="100%">
+      <tr>
+        <td width="25%">
+          <img src="{% static 'G 1.png' %}" class="zoom">
+        </td>
+        <td width="25%">
+          <img src="{% static 'G 2.PNG' %}" class="zoom">
+        </td>
+        <td width="25%">
+          <img src="{% static 'G 3.PNG' %}" class="zoom">
+        </td>
+        <td width="25%">
+          <img src="{% static 'G 4.PNG' %}" class="zoom">
+        </td>
+      </tr>
+    </table>
+  </center>
+
+  <br>
+  <br>
+
+  <img src="{% static 'ending.png' %}">
+  <img src="{% static 'ending 2.png' %}">
+
+</body>
+
+</html>

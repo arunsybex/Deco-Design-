@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login | Deco Design</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'logo.png' %}">
+    <link rel="stylesheet" href="{% static 'login.css' %}" type="text/css">
+    <style>
+        #manmeet {
+            color: white;
+            text-decoration: none;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="login" method="POST">
+        {% csrf_token %}
+        <div class="login-box">
+            <h1>Login</h1>
+            <div class="textbox">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Username" name="username">
+            </div>
+
+            <div class="textbox">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password" name="password">
+            </div>
+
+            <input type="submit" class="btn" value="Login">
+
+            <div>
+                {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                        {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            <div>
+                <center>
+                    <font color="black" face="calibri" size="6.5" align="left">
+                        <strong><a href="{% url 'home' %}" id="manmeet">
+                                <h1>Home</h1>
+                            </a></strong>
+                    </font>
+                </center>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="icon" href="{% static 'logo.png' %}">
+    <title>Response</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: url(bg.jpg) no-repeat;
+            background-size: cover;
+        }
+
+        .heading {
+            width: 100%;
+            overflow: hidden;
+            font-size: 20px;
+            padding: 8px 0;
+            margin: 8px 0;
+            border-bottom: 1px solid #4caf50;
+        }
+
+        #manmeet {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <h1 align='center'>
+            Hello, {{user.first_name}}. 
+            Your message has been sent. We Will connect with you Shortly
+        </h1>
+    </div>
+    <div>
+        <center>
+            <font color="black" face="calibri" size="6.5" align="left">
+                <strong><a href="{% url 'home' %}" id="manmeet">
+                        <h3 class="manmeet" align="center">Home Page</h3>
+                    </a></strong>
+            </font>
+        </center>
+    </div>
+
+</body>
+
+</html>

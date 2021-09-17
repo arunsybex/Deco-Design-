@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Living/Drawing Room | Deco Design</title>
+  {% load static %}
+  <link rel="icon" href="{% static 'logo.png' %}">
+  <link rel="stylesheet" href="{% static 'other.css' %}" type="text/css">
+</head>
+
+<body bgcolor="white" onload="myFunction()" style="margin:0;">
+  <div id="loader"></div>
+
+  <table border="0" cellpadding="0" cellspacing="0" align="right">
+    <th><img src="{% static 'facebook icon.PNG' %}"></th>
+    <th><img src="{% static 'twitter icon.PNG' %}"></th>
+    <th><img src="{% static 'pintrest icon.PNG' %}"></th>
+    <th><img src="{% static 'linkdin icon.PNG' %}"></th>
+    <th><img src="{% static 'youtube icon.PNG' %}"></th>
+    <th><img src="{% static 'instagram icon.PNG' %}"></th>
+  </table>
+
+  </br>
+  </br>
+
+  <table border="1" width="100%" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+
+      <hr />
+      <th width="12.5%"><img src="{% static 'logo.PNG' %}"></th>
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="6.5" align="right">
+            <strong><a href="{% url 'home' %}" id="manmeet">Home</a></strong>
+          </font>
+        </center>
+      </td>
+
+      <td width="12.5%">
+        <font color="black" face="calibri" size="4" align="center">
+          <div class="dropdown">
+            <button class="dropbtn"><strong>
+                <center>Residential</center>
+              </strong></button>
+        </font>
+        <div class="dropdown-content">
+          <font color="black" face="calibri" size="4" align="center">
+            <a href="{% url 'livingroom' %}">Living/Drawing Room</a>
+            <a href="{% url 'diningroom'%}">Dining Room</a>
+            <a href="{% url 'kidrroom' %}">Kids Room</a>
+            <a href="{% url 'studyroom'%}">Study Room</a>
+            <a href="{% url 'bedroom' %}">Bedroom</a>
+            <a href="{% url 'falseceiling' %}">False Ceiling</a>
+          </font>
+
+        </div>
+        </div>
+
+      </td>
+
+      <td width="12.5%">
+        <font color="black" face="calibri" size="4" align="center">
+          <div class="dropdown">
+            <button class="dropbtn"><strong>Commercial</strong></button>
+            <div class="dropdown-content">
+              <a href="{% url 'school' %}">School</a>
+              <a href="{% url 'gym' %}">Gym</a>
+              <a href="{% url 'cafe' %}">Cafe</a>
+              <a href="{% url 'restaurants' %}">Restaurants</a>
+            </div>
+          </div>
+        </font>
+      </td>
+
+      <td width="12.5%">
+        <font color="black" face="calibri" size="4" align="center">
+          <div class="dropdown">
+            <button class="dropbtn"><strong>Office</strong></button>
+            <div class="dropdown-content">
+              <a href="{% url 'managerroom' %}">Manager Room</a>
+              <a href="{% url 'sharedoffice' %}">Shared Office</a>
+              <a href="{% url 'reception' %}">Reception</a>
+              <a href="#"></a>
+            </div>
+          </div>
+        </font>
+      </td>
+      {% if user.is_authenticated %}
+      <td width="12.5%">
+        <font color="black" face="calibri" size="6.5" align="left">
+          <strong>Hello, {{user.first_name}}</strong>
+        </font>
+      </td>
+      <td width="12.5%">
+        <font color="black" face="calibri" size="6.5" align="left">
+          <strong><a href="{% url 'logout' %}" id="manmeet">Logout</a></strong>
+        </font>
+      </td>
+      <td width="12.5%">
+        <font color="black" face="calibri" size="6.5" align="center">
+          <strong><a href="{% url 'contact' %}" id="manmeet">Contact Us</a></strong>
+        </font>
+      </td>
+      {% else %}
+      <td width="12.5%">
+        <font color="black" face="calibri" size="6.5" align="left">
+          <strong><a href="{% url 'register' %}" id="manmeet">Register</a></strong>
+        </font>
+      </td>
+
+      <td width="12.5%">
+        <font color="black" face="calibri" size="6.5" align="left">
+          <strong><a href="{% url 'login' %}" id="manmeet">Login</a></strong>
+        </font>
+      </td>
+      {% endif %}
+
+    </tr>
+
+  </table>
+
+  <center><img src="{% static 'living room banner.PNG' %}" width="100%" height="65%"></center>
+  </br>
+  </br>
+
+  <table border="0" width="70%" cellpadding="10" cellspacing="20" align="center">
+    <tr>
+      <td>
+        <p>
+          <font color="black" face="calibri" size="10" align="left">
+            LIVING/DRAWING ROOM
+          </font>
+          <p>
+            <font color="black" face="calibri" size="4" align="left">
+              Good Living/Drawing rooms have some things in common.They are<br>
+              harmonios,elegant and fit in with the taste and personality of the people<br>
+              who use it.You can have endless possibilities and ideas to decorate your<br>
+              living/drawing room.But you need to start with the basic question: what<br>
+              do you wamt to use it for
+            </font>
+          </p>
+          <p>
+            <font color="black" face="calibri" size="4" align="left">
+              It can be a place for social gatherings,or a space to watch TV together in<br>
+              the evening or also can be user as a dining space when a room seprator<br>
+              is implemented.So,before buying furniture for the living/drawing room, it<br>
+              is important to take care of the function needs.
+          </p>
+          </font>
+        </p>
+      </td>
+      <th><img src="{% static 'living room photo.PNG' %}" class="zoom"></th>
+    </tr>
+  </table>
+  <table border="0" width="70%" cellpadding="10" cellspacing="20" align="center">
+    <tr>
+      <td>
+        <center>
+          <hr />
+          <h1 align="center">WHAT ARE SOME OF THE MOST POPULAR LIVING/DRAWING ROOM DECORATING IDEAS?</h1>
+          </br>
+          <p>
+            <font color="black" face="calibri" size="4" align="center">
+              <strong>Country style living/drawing rooms:</strong>
+              A country style living room design ofteninclude traditional features like large brick-build
+              hearths,broad
+              timber
+              beams and carpents,although undecorated wooden floors work really well in a country style living/drawing
+              room.Large
+              dining tables and accessories like candleas can also be greate additions.
+            </font>
+          </p>
+          <p>
+            <font color="black" face="calibri" size="4" align="center">
+              <strong> Minimalist living/drawing rooms:</strong>
+              Drawing on the techniques of modernist architecture,minimalism is all about making the most out of as
+              little
+              as
+              possible.Stark,sleek lines combine well with open space,strategically placed carpets and seating to
+              simplify
+              the
+              living room as much as possible.
+            </font>
+          </p>
+          <p>
+            <font color="black" face="calibri" size="4" align="center">
+              <strong> Classic living/drawing rooms:</strong>
+              classic living/drawing room is spacious and has abudant light. Generally,classic design have generous
+              seating,bright
+              colours and decorations,but will avoid any loss of balance or poise in the arrangment.
+            </font>
+          </p>
+          <p>
+            <font color="black" face="calibri" size="4" align="center">
+              <strong>Rustic style living/drawing rooms:</strong>Rustic style living/drawing rooms are generally
+              large,spacios and
+              welcoming.Big windows and decorative curtains combined with brick fireplaces,sideboards and wooden
+              floors,along with
+              impressive timber beams to create living spaces where the whole family can spread quality time together.
+            </font>
+          </p>
+          <p>
+            <font color="black" face="calibri" size="4" align="center">
+              <strong>Modern living/drawing rooms:</strong>Modern living/drawing rooms sit between the stylish
+              minimalist
+              designs
+              and the energy of classic designs.
+            </font>
+          </p>
+          <hr />
+        </center>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <br>
+
+  <center>
+    <table width="100%">
+      <tr>
+        <td width="25%">
+          <img src="{% static 'LD 1.png' %}" class="zoom">
+        </td>
+        <td width="25%">
+          <img src="{% static 'LD 2.PNG' %}" class="zoom">
+        </td>
+        <td width="25%">
+          <img src="{% static 'LD 3.PNG' %}" class="zoom">
+        </td>
+        <td width="25%">
+          <img src="{% static 'LD 4.PNG' %}" class="zoom">
+        </td>
+      </tr>
+    </table>
+  </center>
+
+  <br>
+  <br>
+
+  <img src="{% static 'ending.png' %}">
+  <img src="{% static 'ending 2.png' %}">
+
+</body>
+
+</html>

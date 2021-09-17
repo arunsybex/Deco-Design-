@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Deco Design</title>
+  {% load static %}
+  <link rel="icon" href="{% static 'logo.png' %}">
+  <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+  <script src="{% static 'script.js' %}" type="text/javascript"></script>
+  <style>
+    /* Center the loader */
+    #loader {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 1;
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+      border: 16px solid #ebdfdf;
+      border-radius: 50%;
+      border-top: 16px solid #4C7876;
+      width: 120px;
+      height: 120px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Add animation to "page content" */
+    .animate-bottom {
+      position: relative;
+      -webkit-animation-name: animatebottom;
+      -webkit-animation-duration: 1s;
+      animation-name: animatebottom;
+      animation-duration: 1s
+    }
+
+    @-webkit-keyframes animatebottom {
+      from {
+        bottom: -100px;
+        opacity: 0
+      }
+
+      to {
+        bottom: 0px;
+        opacity: 1
+      }
+    }
+
+    @keyframes animatebottom {
+      from {
+        bottom: -100px;
+        opacity: 0
+      }
+
+      to {
+        bottom: 0;
+        opacity: 1
+      }
+    }
+
+    #myDiv {
+      display: none;
+      text-align: center;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      margin-left: -800px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body bgcolor="white" onload="myFunction()" style="margin:0;">
+  <div id="loader"></div>
+
+  <div style="display:none;" id="myDiv" class="animate-bottom">
+    <table border="0" cellpadding="0" cellspacing="0" align="right">
+      <th><img src="{% static 'facebook icon.PNG' %}"></th>
+      <th><img src="{% static 'twitter icon.PNG' %}"></th>
+      <th><img src="{% static 'pintrest icon.PNG' %}"></th>
+      <th><img src="{% static 'linkdin icon.PNG' %}"></th>
+      <th><img src="{% static 'youtube icon.PNG' %}"></th>
+      <th><img src="{% static 'instagram icon.PNG' %}"></th>
+    </table>
+
+    </br>
+    </br>
+
+    <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
+      <tr>
+        <hr />
+        <th width="12.5%"><img src="{% static 'logo.PNG' %}"></th>
+        <td width="12.5%">
+          <font color="black" face="calibri" size="6.5" align="left">
+            <strong><a href="{% url 'home' %}" id="manmeet">Home</a></strong>
+          </font>
+        </td>
+
+        <td width="12.5%">
+          <font color="black" face="calibri" size="4" align="center">
+            <div class="dropdown">
+              <button class="dropbtn"><strong>Residential</strong></button>
+              <div class="dropdown-content">
+                <a href="{% url 'livingroom' %}">Living/Drawing Room</a>
+                <a href="{% url 'diningroom'%}">Dining Room</a>
+                <a href="{% url 'kidrroom' %}">Kids Room</a>
+                <a href="{% url 'studyroom'%}">Study Room</a>
+                <a href="{% url 'bedroom' %}">Bedroom</a>
+                <a href="{% url 'falseceiling' %}">False Ceiling</a>
+              </div>
+            </div>
+          </font>
+        </td>
+
+        <td width="12.5%">
+          <font color="black" face="calibri" size="4" align="center">
+            <div class="dropdown">
+              <button class="dropbtn"><strong>Commercial</strong></button>
+              <div class="dropdown-content">
+                <a href="{% url 'school' %}">School</a>
+                <a href="{% url 'gym' %}">Gym</a>
+                <a href="{% url 'cafe' %}">Cafe</a>
+                <a href="{% url 'restaurants' %}">Restaurants</a>
+              </div>
+            </div>
+          </font>
+        </td>
+
+        <td width="12.5%">
+          <font color="black" face="calibri" size="4" align="center">
+            <div class="dropdown">
+              <button class="dropbtn"><strong>Office</strong></button>
+              <div class="dropdown-content">
+                <a href="{% url 'managerroom' %}">Manager Room</a>
+                <a href="{% url 'sharedoffice' %}">Shared Office</a>
+                <a href="{% url 'reception' %}">Reception</a>
+                <a href="#"></a>
+              </div>
+            </div>
+          </font>
+        </td>
+        {% if user.is_authenticated %}
+        <td width="12.5%">
+          <font color="black" face="calibri" size="6.5" align="left">
+            <strong>Hello, {{user.first_name}}</strong>
+          </font>
+        </td>
+        <td width="12.5%">
+          <font color="black" face="calibri" size="6.5" align="left">
+            <strong><a href="{% url 'logout' %}" id="manmeet">Logout</a></strong>
+          </font>
+        </td>
+        <td width="12.5%">
+          <font color="black" face="calibri" size="6.5" align="center">
+            <strong><a href="{% url 'contact' %}" id="manmeet">Contact Us</a></strong>
+          </font>
+        </td>
+        {% else %}
+        <td width="12.5%">
+          <font color="black" face="calibri" size="6.5" align="left">
+            <strong><a href="{% url 'register' %}" id="manmeet">Register</a></strong>
+          </font>
+        </td>
+
+        <td width="12.5%">
+          <font color="black" face="calibri" size="6.5" align="left">
+            <strong><a href="{% url 'login' %}" id="manmeet">Login</a></strong>
+          </font>
+        </td>
+        {% endif %}
+
+    </table>
+    <br>
+
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="{% static 'main pic 1.PNG' %}" style="width:100%">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="{% static 'main pic 2.PNG' %}" style="width:100%">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="{% static 'main pic 3.PNG' %}" style="width:100%">
+        <div class="text"></div>
+      </div>
+
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    </br>
+    </br>
+    </br>
+    </br>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+    </script>
+
+    <center>
+      <div style="background-color:white;">
+        <p>
+          <font color="black" face="Calibri" size="5">
+            CREATIVE DESIGN SERVICES
+          </font>
+
+        </p>
+      </div>
+      <p color="black" face="Calibri" size="1">
+        Creative Interior & Decor has Supported more than 1,000 firms by delivering expert witness services on over
+        10,000
+        cases in a wide range of specialties.
+      </p>
+
+      <table cellpadding="0" border="0" cellspacing="50">
+        <tr>
+          <th><img src="{% static 'photo 1.png' %}" class="zoom"></th>
+          <th><img src="{% static 'photo 2.png' %}" class="zoom"></th>
+          <th><img src="{% static 'photo 3.png' %}" class="zoom"></th>
+        </tr>
+
+        <tr>
+          <th>
+            <font color="black" face="arial" size="5">Residential Interior</font>
+          </th>
+          <th>
+            <font color="black" face="arial" size="5">Commercial Interior</font>
+          </th>
+          <th>
+            <font color="black" face="arial" size="5">Office Interior</font>
+          </th>
+        </tr>
+
+        <tr>
+
+          <td>
+            <p color="black" face="Calibri" size="1" align="center">
+              We provide you with the best residential</br>
+              interiors keepingin mind space, designs, your</br>
+              choice, convenience, and comfort. We</br>
+              carefully access the styling and furnishing</br>
+              needs of your house and build your interiors</br>
+              keeping in mind the the state-of-the-art designs in</br>
+              different styles
+            </p>
+          </td>
+
+          <td>
+            <p color="black" face="Calibri" size="1" align="center">
+              Commercial Interiors are the reflection of the</br>
+              ambiance and the aura that space deliver. We</br>
+              create the ideal commercial space that works</br>
+              for you & your bussiness, make space</br>
+              planning, build commercial interior design,</br>
+              have expertise in building standards & </br>
+              sustainable designs.
+              <p>
+          </td>
+
+          <td>
+            <p color="black" face="Calibri" size="1" align="center">
+              We design state of the art office space, create a</br>
+              rejuvenating environment fot the employees,</br>
+              privacy to the workers, free space for</br>
+              movement, an eye catching-design & </br>
+              decoration. Our work defines the corporate</br>
+              leadership of the company , & give offices a</br>
+              statement of the style & luxury in your budget.
+            </P>
+          </td>
+      </table>
+      </br>
+      </br>
+
+      <img src="{% static 'main banner 4.png' %}" width= 100%>
+      <img src="{% static 'main banner 5.png' %}" width= 100%>
+      <img src="{% static 'main writeup 4.png' %}" width= 100%>
+      <img src="{% static 'ending.png' %}" width= 100%>
+      <img src="{% static 'ending 2.png' %}" width= 100%>
+
+    </center>
+  </div>
+
+</body>
+
+</html>

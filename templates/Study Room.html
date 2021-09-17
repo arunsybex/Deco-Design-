@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Study Room | Deco Design</title>
+  {% load static %}
+  <link rel="icon" href="{% static 'logo.png' %}">
+  <link rel="stylesheet" href="{% static 'other.css' %}" type="text/css">
+</head>
+
+<body bgcolor="white">
+
+  <table border="0" cellpadding="0" cellspacing="0" align="right">
+    <th><img src="{% static 'facebook icon.PNG' %}"></th>
+    <th><img src="{% static 'twitter icon.PNG' %}"></th>
+    <th><img src="{% static 'pintrest icon.PNG' %}"></th>
+    <th><img src="{% static 'linkdin icon.PNG' %}"></th>
+    <th><img src="{% static 'youtube icon.PNG' %}"></th>
+    <th><img src="{% static 'instagram icon.PNG' %}"></th>
+  </table>
+
+  </br>
+  </br>
+
+  <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+      <hr />
+      <th width="12.5%"><img src="{% static 'logo.PNG' %}"></th>
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="6.5" align="center">
+            <strong><a href="{% url 'home' %}" id="manmeet">Home</a></strong>
+          </font>
+        </center>
+      </td>
+      <th width="12.5%">
+        <font color="black" face="calibri" size="6.5" align="center">
+          <strong>About</strong>
+        </font>
+      </th>
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="4" align="center">
+            <div class="dropdown">
+              <button class="dropbtn"><strong>Residential</strong></button>
+              <div class="dropdown-content">
+                <a href="{% url 'livingroom' %}">Living/Drawing Room</a>
+                <a href="{% url 'diningroom'%}">Dining Room</a>
+                <a href="{% url 'kidrroom' %}">Kids Room</a>
+                <a href="{% url 'studyroom'%}">Study Room</a>
+                <a href="{% url 'bedroom' %}">Bedroom</a>
+                <a href="{% url 'falseceiling' %}">False Ceiling</a>
+              </div>
+            </div>
+          </font>
+        </center>
+      </td>
+
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="4" align="center">
+            <div class="dropdown">
+              <button class="dropbtn"><strong>Commercial</strong></button>
+              <div class="dropdown-content">
+                <a href="{% url 'school' %}">School</a>
+                <a href="{% url 'gym' %}">Gym</a>
+                <a href="{% url 'cafe' %}">Cafe</a>
+                <a href="{% url 'restaurants' %}">Restaurants</a>
+              </div>
+            </div>
+          </font>
+        </center>
+      </td>
+
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="4" align="center">
+            <div class="dropdown">
+              <button class="dropbtn"><strong>Office</strong></button>
+              <div class="dropdown-content">
+                <a href="{% url 'managerroom' %}">Manager Room</a>
+                <a href="{% url 'sharedoffice' %}">Shared Office</a>
+                <a href="{% url 'reception' %}">Reception</a>
+                <a href="#"></a>
+              </div>
+            </div>
+          </font>
+        </center>
+      </td>
+      {% if user.is_authenticated %}
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="6.5" align="center">
+            <strong>Hello, {{user.first_name}}</strong>
+          </font>
+        </center>
+      </td>
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="6.5" align="center">
+            <strong><a href="{% url 'logout' %}" id="manmeet">Logout</a></strong>
+          </font>
+        </center>
+      </td>
+      <td width= "12.5%">
+        <font color="black" face="calibri" size="6.5" align="left">
+          <strong><a href="{% url 'contact' %}" id="manmeet">Contact Us</a></strong>
+        </font>
+      </td>
+      {% else %}
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="6.5" align="center">
+            <strong><a href="{% url 'register' %}" id="manmeet">Register</a></strong>
+          </font>
+        </center>
+      </td>
+
+      <td width="12.5%">
+        <center>
+          <font color="black" face="calibri" size="6.5" align="center">
+            <strong><a href="{% url 'login' %}" id="manmeet">Login</a></strong>
+          </font>
+        </center>
+      </td>
+      {% endif %}
+
+  </table>
+
+  <center><img src="{% static 'study room banner.PNG' %}" width="100%" height="65%"></center>
+  </br>
+  </br>
+
+  <table border="0" width="65%" cellpadding="10" cellspacing="20" align="center">
+    <tr>
+      <td>
+        <p>
+          <font color="black" face="calibri" size="10" align="left">
+            STUDY ROOM
+          </font>
+          <p>
+            <font color="black" face="calibri" size="4" align="left">
+              If you're having trouble getting your kids to do homework,check out these<br>
+              cool study room ideas.Maybe all you need to kick-start your kid's study<br>
+              habits is a change of scenery! A back-to-school homework space that's<br>
+              quiet for focus,colourful for inspiration and organized to reduce distractions<br>
+              would make homework time a pleasure for most kids.
+            </font>
+          </p>
+      </td>
+      <th><img src="{% static 'study room photo.png' %}" class="zoom"></th>
+    </tr>
+  </table>
+  <hr />
+  <h1 align="center"> STUDY ROOM IDEAS</h1>
+  <p color="black" face="calibri" size="4" align="center">
+    The study room is a space that should reflect a person's character and individuality.It should be
+    organized,furnished and decorated in a way that allows the user<br>
+    to feel comfortable and productive and shouldn't include distraction.However,this doesn't mean it has to be
+    austere
+    and boring.Regardless of the size of the<br>
+    room,you can crete an awesome and affordable kids homework space.
+  </p>
+  <hr/>
+
+  <br>
+  <br>
+
+  <center>
+    <table width="100%">
+      <tr>
+        <td width="25%">
+          <img src="{% static 'SR 1.png' %}" class="zoom">
+        </td>
+        <td width="25%">
+          <img src="{% static 'SR 2.PNG' %}" class="zoom">
+        </td>
+        <td width="25%">
+          <img src="{% static 'SR 3.PNG' %}" class="zoom">
+        </td>
+        <td width="25%">
+          <img src="{% static 'SR 4.PNG' %}" class="zoom">
+        </td>
+      </tr>
+    </table>
+  </center>
+
+  <br>
+  <br>
+
+  <img src="{% static 'ending.png' %}">
+  <img src="{% static 'ending 2.png' %}">
+
+
+</body>
+
+</html>

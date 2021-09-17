@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bedoom | Deco Design</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'logo.png' %}">
+    <link rel="stylesheet" href="{% static 'other.css' %}" type="text/css">
+</head>
+
+<body bgcolor="white">
+
+        <table border="0" cellpadding="0" cellspacing="0" align="right">
+            <th><img src="{% static 'facebook icon.PNG' %}"></th>
+            <th><img src="{% static 'twitter icon.PNG' %}"></th>
+            <th><img src="{% static 'pintrest icon.PNG' %}"></th>
+            <th><img src="{% static 'linkdin icon.PNG' %}"></th>
+            <th><img src="{% static 'youtube icon.PNG' %}"></th>
+            <th><img src="{% static 'instagram icon.PNG' %}"></th>
+        </table>
+
+        </br>
+        </br>
+
+        <table border="0" width="101%" cellpadding="0" cellspacing="0" align="center">
+            <tr>
+                <hr />
+                <th width="12.5%"><img src="{% static 'logo.PNG' %}"></th>
+                <td width="12.5%">
+                    <font color="black" face="calibri" size="6.5" align="left">
+                        <strong><a href="{% url 'home' %}" id="manmeet">Home</a></strong>
+                    </font>
+                </td>
+
+                <td width="12.5%">
+                    <font color="black" face="calibri" size="4" align="center">
+                        <div class="dropdown">
+                            <button class="dropbtn"><strong>Residential</strong></button>
+                            <div class="dropdown-content">
+                                <a href="{% url 'livingroom' %}">Living/Drawing Room</a>
+                                <a href="{% url 'diningroom'%}">Dining Room</a>
+                                <a href="{% url 'kidrroom' %}">Kids Room</a>
+                                <a href="{% url 'studyroom'%}">Study Room</a>
+                                <a href="{% url 'bedroom' %}">Bedroom</a>
+                                <a href="{% url 'falseceiling' %}">False Ceiling</a>
+                            </div>
+                        </div>
+                    </font>
+                </td>
+
+                <td width="12.5%">
+                    <font color="black" face="calibri" size="4" align="center">
+                        <div class="dropdown">
+                            <button class="dropbtn"><strong>Commercial</strong></button>
+                            <div class="dropdown-content">
+                                <a href="{% url 'school' %}">School</a>
+                                <a href="{% url 'gym' %}">Gym</a>
+                                <a href="{% url 'cafe' %}">Cafe</a>
+                                <a href="{% url 'restaurants' %}">Restaurants</a>
+                            </div>
+                        </div>
+                    </font>
+                </td>
+
+                <td width="12.5%">
+                    <font color="black" face="calibri" size="4" align="center">
+                        <div class="dropdown">
+                            <button class="dropbtn"><strong>Office</strong></button>
+                            <div class="dropdown-content">
+                                <a href="{% url 'managerroom' %}">Manager Room</a>
+                                <a href="{% url 'sharedoffice' %}">Shared Office</a>
+                                <a href="{% url 'reception' %}">Reception</a>
+                                <a href="#"></a>
+                            </div>
+                        </div>
+                    </font>
+                </td>
+                {% if user.is_authenticated %}
+                <td width="12.5%">
+                    <font color="black" face="calibri" size="6.5" align="left">
+                        <strong>Hello, {{user.first_name}}</strong>
+                    </font>
+                </td>
+                <td width="12.5%">
+                    <font color="black" face="calibri" size="6.5" align="left">
+                        <strong><a href="{% url 'logout' %}" id="manmeet">Logout</a></strong>
+                    </font>
+                </td>
+                <td width="12.5%">
+                    <font color="black" face="calibri" size="6.5" align="left">
+                        <strong><a href="{% url 'contact' %}" id="manmeet">Contact Us</a></strong>
+                    </font>
+                </td>
+                {% else %}
+                <td width="12.5%">
+                    <font color="black" face="calibri" size="6.5" align="left">
+                        <strong><a href="{% url 'register' %}" id="manmeet">Register</a></strong>
+                    </font>
+                </td>
+
+                <td width="12.5%">
+                    <font color="black" face="calibri" size="6.5" align="left">
+                        <strong><a href="{% url 'login' %}" id="manmeet">Login</a></strong>
+                    </font>
+                </td>
+                {% endif %}
+
+        </table>
+
+        <center><img src="{% static 'bedroom banner.PNG' %}" width="100%" height="65%"></center>
+        </br>
+        </br>
+
+        <table border="0" width="70%" cellpadding="10" cellspacing="20" align="center">
+            <tr>
+                <td>
+                    <p>
+                        <font color="black" face="calibri" size="10" align="left">
+                            <strong>BEDROOM</strong>
+                        </font>
+                    </p>
+                    <p>
+                        <font color="black" face="calibri" size="4" align="left">
+                            Are you on look out for fabulous bedroom ideas?Then you've come to<br>
+                            the right place.Did you know that we spend aroud one third of our lives<br>
+                            in bed ? It's therefore all the more crucial that our bedroom should be<br>
+                            as beautiful-and practical-as possible.
+                            <br>
+                            <br>
+                            Whether you dream of a calm and restful sanctuary or a luxurious hotel<br>
+                            style bedroom ideas has expert advice on<br>
+                            everything you need to know before you make a start,from finding the<br>
+                            perfect mattress to choosing a bedroom colour scheme.
+                        </font>
+                    </p>
+                </td>
+                <th><img src="{% static 'bedroom photo.png' %}" class="zoom"></th>
+            </tr>
+        </table>
+        <hr />
+
+        <table border="0" width="70%" cellpadding="10" cellspacing="20" align="center">
+            <tr>
+                <td>
+                    <h1 align="center">
+                        BEDROOM IDEAS
+                    </h1>
+                    <p>
+                        <font color="black" face="calibri" size="4" align="left">
+                            Your bedroom was probably the first room you ever helped to decorate.Perhaps your parents
+                            let
+                            you pick out your favorite paint colour for the walls,or a duvet
+                            cover featuring your favorite cartoon character or Disney princess. As grown ups,we can make
+                            our
+                            bedroom decor as wild and wonderful we like.Decorating a
+                            bedroom is a chance to really reflect your personal style and create a look you absolutely
+                            love
+                            with <STRONG>Creative Interior and Decor.</STRONG>
+                        </font>
+                    </p>
+                    <br>
+                    <hr />
+                    <h1 align="center">PLANNING AND DECORATING YOUR BEDROOM</h1>
+                    <p>
+                        <font color="black" face="calibri" size="5" align="left">
+                            <strong>How to choose the perfect bed:</strong>
+                        </font>
+                    </p>
+                    <p>
+                        <font color="black" face="calibri" size="4" align="left">
+                            When designing a bedroom,the most obvious place to start is with the bed.After all,without a
+                            good bed,it's difficult to get a good night sleep.Make sure
+                            you choose the right size for bed for the size of your bedroom.A super king size bed will
+                            dominate a small bedroom,making it difficult to move around the space
+                            or fit in any other bedroom furnitur,while a standard double bed might look a bit lost in a
+                            large bedroom.Measure your bedroom,and make sure the bed
+                            you choose will allow for at least 70cm of circulation space around the sides around the
+                            sides
+                            and end of the bed.
+                        </font>
+                    </p>
+                    <p>
+                        <font color="black" face="calibri" size="4" align="left">
+                            <strong> Decorating a bedroom-what style is best for you?</strong>
+                            <br>
+                            Once you've found the right size bed,it's time to choose your style.If you're looking to
+                            make a
+                            contemporary statement, an oversized headboard will make a
+                            striking focal point of your bedroom scheme. Love traditional or country style? A
+                            beautifully
+                            upholstered headboard will wok like a charm. If you're a fan of
+                            industrial chic or vintage finds,an iron bedframe might be just what you're after.
+                        </font>
+                    </p>
+                    <p>
+                        <font color="black" face="calibri" size="4" align="left">
+                            <strong>Why yor mattress is key ? </strong>
+                            <br>
+                            A good mattress is even more important than the bed it sits on.Take time to choose the right
+                            one
+                            for you,trying it out in-store if possible,and lying on it in
+                            various different positions.Whether you go for an innerspring mattress,memory foam mattress
+                            or
+                            anything in between,it pays to invest in well-made
+                            model. A top quality mattress should keep its shape for seven years,after which it's the
+                            optimum
+                            time to change it.Check out our guide to best
+                            mattresses.
+                        </font>
+                    </p>
+                    <p>
+                        <font color="black" face="calibri" size="4" align="left">
+                            <strong>How to choose your bedroom furniture?</strong>
+                            <br>
+                            A bedroom furniture set keeps things simple-it's a failsafe and often cost-effective way to
+                            create a unified bedroom scheme.But if you're feeling a bit more
+                            adventurous,start with your bed and mix and match the rest of your furniture around it.The
+                            key
+                            to any successful eclectic scheme is to choose a colour
+                            palette abd stick to it.So if you have a dark wood bed frame,match it with wooden furniture
+                            in
+                            similar tones.Similarly,if you have a white bed,choosing
+                            white or pale bedroom furniture will help the scheme to pull together as one.
+                        </font>
+                    </p>
+                    <hr />
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <br>
+
+        <center>
+            <table width="100%">
+                <tr>
+                    <td width="25%">
+                        <img src="{% static 'B 1.png' %}" class="zoom">
+                    </td>
+                    <td width="25%">
+                        <img src="{% static 'B 2.PNG' %}" class="zoom">
+                    </td>
+                    <td width="25%">
+                        <img src="{% static 'B 3.PNG' %}" class="zoom">
+                    </td>
+                    <td width="25%">
+                        <img src="{% static 'B 4.PNG' %}" class="zoom">
+                    </td>
+                </tr>
+            </table>
+        </center>
+
+        <br>
+        <br>
+
+        <img src="{% static 'ending.png' %}">
+        <img src="{% static 'ending 2.png' %}">
+
+    </div>
+
+    </div>
+</body>
+
+</html>
