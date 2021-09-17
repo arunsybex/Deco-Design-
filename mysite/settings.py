@@ -130,7 +130,7 @@ STATIC_ROOT = [
     os.path.join(BASE_DIR, "static/images/Examples"),
 ]
 
-STATIC_URL = '/static/'
+STATIC_URL = 'E:\Work\mysite\static'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static/images"),
