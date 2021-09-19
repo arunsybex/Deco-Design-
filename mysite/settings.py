@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-e8mm1i%#o2)-s_3-nwxv*j!6au0sb%=p&o-$s_6o+q^g9p_gp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -120,7 +120,7 @@ USE_TZ = True
 
 #STATIC_ROOT = 'E:\Work\mysite\static'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, '../static')
 
 STATIC_ROOT = [
     os.path.join(BASE_DIR, "static/images"),
