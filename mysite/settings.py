@@ -120,6 +120,8 @@ USE_TZ = True
 
 #STATIC_ROOT = 'E:\Work\mysite\static'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 STATIC_ROOT = [
     os.path.join(BASE_DIR, "static/images"),
     os.path.join(BASE_DIR, "static/css"),
